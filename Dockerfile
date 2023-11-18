@@ -8,13 +8,13 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Step 4: Create .env.local file with the OpenAI API key
-RUN echo "OPENAI_API_KEY=${OPENAI_API_KEY}" > .env.local 
+RUN echo "OPENAI_API_KEY=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" > .env.local 
 
 # Step 5: Install dependencies
 RUN npm install
 
 # Step 6: Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 8081
 
 # Step 7: Define the command to run the app in development mode
 CMD ["npm", "run", "dev"]
