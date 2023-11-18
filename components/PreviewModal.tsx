@@ -24,6 +24,8 @@ export function PreviewModal({
     return null;
   }
 
+  window?.localStorage.setItem("currentHtml", html);
+
   const downloadHtml = () => {
     const blob = new Blob([html], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
@@ -33,6 +35,7 @@ export function PreviewModal({
     link.download = 'index.html';
     link.click();
   };
+
 
   return (
     <div
