@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Step 4: Create .env.local file with the OpenAI API key
-RUN echo "OPENAI_API_KEY=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" > .env.local 
+RUN echo "OPENAI_API_KEY=" > .env.local 
 
 # Step 5: Install dependencies
 RUN npm install
